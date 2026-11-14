@@ -1,11 +1,7 @@
 import 'dart:convert';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class AnnouncementFormScreen extends StatefulWidget {
   final AnnouncementModel? announcement; // null if creating, non-null if editing
@@ -257,7 +253,7 @@ class _AnnouncementFormScreenState extends State<AnnouncementFormScreen> {
                       style: const TextStyle(fontSize: 12),
                     ),
                     value: _isActive,
-                    activeColor: AppColors.primaryNavy,
+                    activeThumbColor: AppColors.primaryNavy,
                     onChanged: (val) {
                       setState(() {
                         _isActive = val;
@@ -423,4 +419,3 @@ class _AnnouncementFormScreenState extends State<AnnouncementFormScreen> {
     );
   }
 }
-

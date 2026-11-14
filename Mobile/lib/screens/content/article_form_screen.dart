@@ -1,11 +1,7 @@
 import 'dart:convert';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class ArticleFormScreen extends StatefulWidget {
   final ArticleModel? article;
@@ -349,4 +345,3 @@ class _ArticleFormScreenState extends State<ArticleFormScreen> {
     );
   }
 }
-

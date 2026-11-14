@@ -2,12 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/constants/app_colors.dart';
+import 'package:milklink_shared/src/constants/app_colors.dart';
 import '../../providers/auth_provider.dart';
-import '../../providers/donor_provider.dart';
 import '../../widgets/app_widgets.dart';
-import '../auth/claim_record_screen.dart';
-import '../auth/forgot_password_screen.dart';
 import '../auth/login_screen.dart';
 import '../staff/staff_dashboard_screen.dart';
 import 'edit_profile_screen.dart';
@@ -105,11 +102,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
-    final donorProvider = Provider.of<DonorProvider>(context);
-
     final user = authProvider.user;
-    final donor = donorProvider.donor;
-
     String initial = 'M';
     if (user != null && user.name.first.isNotEmpty) {
       initial = user.name.first[0].toUpperCase();

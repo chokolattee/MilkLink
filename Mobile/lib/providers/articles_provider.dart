@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/api_constants.dart';
-import '../core/network/api_client.dart';
-import '../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 enum ArticlesStatus { initial, loading, loaded, error }
 
@@ -61,4 +59,3 @@ class ArticlesProvider extends ChangeNotifier {
     }
   }
 }
-

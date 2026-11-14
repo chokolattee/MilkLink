@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/schedule_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'schedule_detail_screen.dart';
 import 'schedule_form_screen.dart';
 
@@ -687,9 +684,9 @@ class _ScheduleTabViewState extends State<_ScheduleTabView> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: statusColor.withOpacity(0.12),
+                        color: statusColor.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: statusColor.withOpacity(0.25)),
+                        border: Border.all(color: statusColor.withValues(alpha: 0.25)),
                       ),
                       child: Text(
                         item.effectiveStatus,

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/inventory_models.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'collection_form_screen.dart';
 
 class CollectionDetailScreen extends StatefulWidget {
@@ -263,9 +260,9 @@ class _CollectionDetailScreenState extends State<CollectionDetailScreen> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: statusColor.withOpacity(0.15),
+                                    color: statusColor.withValues(alpha: 0.15),
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(color: statusColor.withOpacity(0.3)),
+                                    border: Border.all(color: statusColor.withValues(alpha: 0.3)),
                                   ),
                                   child: Text(
                                     _collection.status,
@@ -440,4 +437,3 @@ class _CollectionDetailScreenState extends State<CollectionDetailScreen> {
     );
   }
 }
-

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/account_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../widgets/user_avatar.dart';
 
 class AccountDetailScreen extends StatefulWidget {
@@ -75,7 +72,7 @@ class _AccountDetailScreenState extends State<AccountDetailScreen> {
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                   const SizedBox(height: 12),
                   DropdownButtonFormField<String>(
-                    value: selectedRole,
+                    initialValue: selectedRole,
                     decoration: const InputDecoration(
                       labelText: 'New Role',
                       border: OutlineInputBorder(),
@@ -596,4 +593,3 @@ class _AccountDetailScreenState extends State<AccountDetailScreen> {
     );
   }
 }
-

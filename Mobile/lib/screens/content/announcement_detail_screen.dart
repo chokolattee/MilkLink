@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'announcement_form_screen.dart';
 
 class AnnouncementDetailScreen extends StatefulWidget {
@@ -323,4 +320,3 @@ class _AnnouncementDetailScreenState extends State<AnnouncementDetailScreen> {
     );
   }
 }
-

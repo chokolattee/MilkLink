@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/milk_request_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class MyMilkRequestsScreen extends StatefulWidget {
   const MyMilkRequestsScreen({super.key});

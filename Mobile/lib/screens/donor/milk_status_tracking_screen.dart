@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/app_colors.dart';
-import '../../models/donor_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../widgets/app_widgets.dart';
 
 class MilkStatusTrackingScreen extends StatelessWidget {

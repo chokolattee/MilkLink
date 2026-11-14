@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/api_constants.dart';
-import '../core/network/api_client.dart';
-import '../models/donor_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 enum DonorStatus { initial, loading, loaded, empty, error }
 
@@ -206,4 +204,3 @@ class DonorProvider extends ChangeNotifier {
     }
   }
 }
-

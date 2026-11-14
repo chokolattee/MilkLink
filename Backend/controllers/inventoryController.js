@@ -58,7 +58,6 @@ exports.createInventory = catchAsyncErrors(async (req, res, next) => {
   const inventoryData = { fridge: fridgeId, user: userId };
 
   if (fridge.fridgeType === "Pasteurized") {
-    console.log("This is where I go in pasteur");
     if (
       !pasteurizedDetails ||
       !pasteurizedDetails.pasteurizationDate ||
@@ -256,7 +255,6 @@ exports.updateInventory = catchAsyncErrors(async (req, res, next) => {
   if (temp) {
     inventory.temp = temp;
   }
-  console.log("Inventory Data: ", inventory);
   // Validation of Updating based on fridge type
   if (fridge.fridgeType === "Pasteurized") {
     if (
@@ -453,7 +451,6 @@ exports.updateAllInventoriesStatus = catchAsyncErrors(
           );
           if (allPasteurized) {
             inventory.status = "Unavailable";
-            console.log("Nagana here")
             await inventory.save();
             updatedCount++;
           }
@@ -596,7 +593,6 @@ exports.pasteurize = catchAsyncErrors(async (req, res, next) => {
       ent.volume = 0;
       ent.isPasteurized = true;
       ent.status = 'Pasteurized';
-      ent.fridge = null; // Removed from unpasteurized fridge
       await ent.save();
 
       await AuditLog.create({
@@ -935,6 +931,4 @@ exports.restoreInventory = catchAsyncErrors(async (req, res, next) => {
     inventory,
   });
 });
-
-
 

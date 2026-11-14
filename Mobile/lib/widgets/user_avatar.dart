@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../core/constants/app_colors.dart';
+import 'package:milklink_shared/src/constants/app_colors.dart';
 
 class UserAvatar extends StatelessWidget {
   final String? avatarUrl;

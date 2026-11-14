@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/account_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/user_avatar.dart';
 import 'account_detail_screen.dart';
@@ -597,19 +594,6 @@ class _AccountManagementScreenState extends State<AccountManagementScreen>
     );
   }
 
-  Widget _initialsWidget(AccountModel account) {
-    return Center(
-      child: Text(
-        account.initials,
-        style: TextStyle(
-          color: _roleColor(account.role),
-          fontWeight: FontWeight.bold,
-          fontSize: 16,
-        ),
-      ),
-    );
-  }
-
   Widget _swipeBg({required Color color, required IconData icon, required String label, required Alignment alignment}) {
     final isLeft = alignment == Alignment.centerLeft;
     return Container(
@@ -713,4 +697,3 @@ class _AccountManagementScreenState extends State<AccountManagementScreen>
     );
   }
 }
-

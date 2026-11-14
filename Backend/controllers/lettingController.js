@@ -343,7 +343,6 @@ exports.updateAttendance = catchAsyncErrors(async (req, res, next) => {
 // Finalize the Milk Letting Session
 exports.finalizeSession = catchAsyncErrors(async (req, res) => {
   const { lettingId, adminId, percent } = req.body;
-  console.log(percent)
   try {
     const event = await Letting.findById(lettingId);
     if (!event) return res.status(404).json({ error: "Event not found" });

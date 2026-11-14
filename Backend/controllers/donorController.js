@@ -157,7 +157,6 @@ exports.getMyDonorProfile = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.updateDonor = catchAsyncErrors(async (req, res, next) => {
-    console.log("Update Donor: ", req.body)
     const donor = await Donor.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
         runValidators: true,

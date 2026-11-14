@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/app_colors.dart';
+import 'package:milklink_shared/src/constants/app_colors.dart';
 
 class RecordsListScaffold extends StatelessWidget {
   final String title;

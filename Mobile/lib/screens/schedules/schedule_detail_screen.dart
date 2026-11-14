@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/schedule_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'schedule_form_screen.dart';
 
 class ScheduleDetailScreen extends StatefulWidget {
@@ -280,9 +277,9 @@ class _ScheduleDetailScreenState extends State<ScheduleDetailScreen> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: statusColor.withOpacity(0.15),
+                                    color: statusColor.withValues(alpha: 0.15),
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(color: statusColor.withOpacity(0.3)),
+                                    border: Border.all(color: statusColor.withValues(alpha: 0.3)),
                                   ),
                                   child: Text(
                                     _schedule.effectiveStatus,
@@ -416,7 +413,7 @@ class _ScheduleDetailScreenState extends State<ScheduleDetailScreen> {
                         decoration: BoxDecoration(
                           color: AppColors.successBg,
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: AppColors.success.withOpacity(0.4)),
+                          border: Border.all(color: AppColors.success.withValues(alpha: 0.4)),
                         ),
                         child: const Row(
                           children: [
@@ -538,4 +535,3 @@ class _ScheduleDetailScreenState extends State<ScheduleDetailScreen> {
     );
   }
 }
-

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/api_constants.dart';
-import '../core/network/api_client.dart';
-import '../models/letting_event_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 enum EventsStatus { initial, loading, loaded, error }
 
@@ -45,4 +43,3 @@ class EventsProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-

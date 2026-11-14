@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/inventory_models.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'entry_form_screen.dart';
 import 'fridge_form_screen.dart';
 import 'pasteurization_form_screen.dart';
@@ -437,7 +434,7 @@ class _FridgeDetailScreenState extends State<FridgeDetailScreen>
   Widget _metricBox({required String label, required String value, required IconData icon, required Color color}) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-      decoration: BoxDecoration(color: color.withOpacity(0.08), borderRadius: BorderRadius.circular(8)),
+      decoration: BoxDecoration(color: color.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(8)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -520,7 +517,7 @@ class _FridgeDetailScreenState extends State<FridgeDetailScreen>
               side: BorderSide(
                 color: isSelected
                     ? AppColors.primaryNavy
-                    : (item.isExpired ? AppColors.error.withOpacity(0.5) : AppColors.border),
+                    : (item.isExpired ? AppColors.error.withValues(alpha: 0.5) : AppColors.border),
                 width: isSelected ? 1.5 : 1,
               ),
             ),
@@ -675,4 +672,3 @@ class _FridgeDetailScreenState extends State<FridgeDetailScreen>
     );
   }
 }
-

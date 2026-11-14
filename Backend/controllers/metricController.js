@@ -152,8 +152,6 @@ exports.getDispensedMilk = catchAsyncErrors(async (req, res, next) => {
     const startDate = new Date(year, 0, 1);
     const endDate = new Date(year + 1, 0, 1);
 
-    console.log("Start Date:", startDate.toISOString());
-    console.log("End Date:", endDate.toISOString());
     const requests = await Request.find({ status: "Done", "milklink.dispenseAt": { $gte: startDate, $lt: endDate } });
 
     const stats = {};
@@ -270,7 +268,6 @@ exports.getRequestsPerMonth = catchAsyncErrors(async (req, res, next) => {
     const requests = await Request.find();
     const incomingRequests = requests.filter((req) => req.status === "Pending");
     const completedRequests = requests.filter((req) => req.status === "Done");
-    console.log(requests)
 
     const monthlyData = {};
 

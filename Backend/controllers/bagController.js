@@ -8,7 +8,6 @@ const User = require('../models/user');
 const Schedule = require('../models/schedule')
 exports.createBag = catchAsyncErrors(async (req, res, next) => {
     const { userID, volume, expressDate, type } = req.body;
-    console.log("body: ", req.body)
     const donor = await Donor.findOne({ user: userID });
     if (!donor) {
         return next(new ErrorHandler('Donor not found', 404));
@@ -87,7 +86,6 @@ exports.getSingleBag = catchAsyncErrors(async (req, res, next) => {
 exports.updateBag = catchAsyncErrors(async (req, res, next) => {
     const { collectionId} = req.body
     const { id } = req.params;
-    console.log("update bag body: ", req.body)
     let bag = await Bag.findByIdAndUpdate(id, req.body, {
         new: true,
         runValidators: true,

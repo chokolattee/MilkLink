@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/constants/app_colors.dart';
+import 'package:milklink_shared/src/constants/app_colors.dart';
 
 class DataFieldItem {
   final String label;
@@ -280,4 +280,3 @@ class _StackedDataCardState extends State<StackedDataCard> {
     );
   }
 }
-

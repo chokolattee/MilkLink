@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/milk_request_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'request_form_screen.dart';
 
 class RequestDetailScreen extends StatefulWidget {
@@ -88,7 +85,7 @@ class _RequestDetailScreenState extends State<RequestDetailScreen> {
               const Text('Record clinical justification before approval:', style: TextStyle(fontSize: 12, color: AppColors.textSecondary)),
               const SizedBox(height: 12),
               DropdownButtonFormField<String>(
-                value: decision,
+                initialValue: decision,
                 decoration: const InputDecoration(labelText: 'Eligibility Decision *', border: OutlineInputBorder()),
                 items: const [
                   DropdownMenuItem(value: 'Eligible', child: Text('Eligible')),

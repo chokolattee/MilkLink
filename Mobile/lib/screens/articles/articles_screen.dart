@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/constants/app_colors.dart';
-import '../../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../providers/articles_provider.dart';
 import '../../widgets/app_widgets.dart';
 import '../content/announcement_detail_screen.dart';

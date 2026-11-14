@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../core/constants/app_colors.dart';
-import '../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class ArticleCard extends StatelessWidget {
   final ArticleModel article;

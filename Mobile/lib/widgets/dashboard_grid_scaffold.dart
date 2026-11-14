@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../core/constants/app_colors.dart';
+import 'package:milklink_shared/src/constants/app_colors.dart';
 
 class DashboardStatItem {
   final String label;
@@ -67,7 +67,17 @@ class DashboardGridScaffold extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.all(10),
           child: Image.asset(
-            'assets/images/milklink_logo.png',
+  'images/milklink_logo.png',
+  package: 'milklink_shared',
+  fit: BoxFit.contain,
+),(
+            'return Container(
+  child: Image.asset(
+    'images/milklink_logo.png',
+    package: 'milklink_shared',
+    fit: BoxFit.contain,
+  ),
+);',
             fit: BoxFit.contain,
           ),
         ),

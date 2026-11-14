@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/network/api_client.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../models/admin/admin_models.dart';
 
 enum AdminLoadStatus { initial, loading, loaded, error }

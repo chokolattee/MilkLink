@@ -1,0 +1,24 @@
+name: milklink_website
+description: "Pasig City Human Milk Bank Mobile Application for Donors and Mothers"
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  milklink_shared:
+    path: ../Shared
+  intl: ^0.20.2
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

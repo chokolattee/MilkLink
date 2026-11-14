@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/screening_appointment_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../widgets/custom_button.dart';
 
 class BookScreeningAppointmentScreen extends StatefulWidget {

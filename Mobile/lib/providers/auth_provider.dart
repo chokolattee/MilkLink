@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/api_constants.dart';
-import '../core/network/api_client.dart';
-import '../core/utils/session_manager.dart';
-import '../models/user_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 enum AuthStatus { initial, loading, authenticated, unauthenticated, error }
 

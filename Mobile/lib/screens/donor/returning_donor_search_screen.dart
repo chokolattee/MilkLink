@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../core/constants/app_colors.dart';
-import '../../models/donor_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../providers/donor_provider.dart';
 import '../../widgets/app_widgets.dart';
 import '../../widgets/status_badge.dart';
@@ -215,4 +214,3 @@ class _ReturningDonorSearchScreenState extends State<ReturningDonorSearchScreen>
     );
   }
 }
-

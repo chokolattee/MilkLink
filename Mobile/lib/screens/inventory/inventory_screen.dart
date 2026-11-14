@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/inventory_models.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'collection_detail_screen.dart';
 import 'fridge_detail_screen.dart';
 import 'fridge_form_screen.dart';
@@ -1202,4 +1199,3 @@ class _InventoryScreenState extends State<InventoryScreen>
     );
   }
 }
-

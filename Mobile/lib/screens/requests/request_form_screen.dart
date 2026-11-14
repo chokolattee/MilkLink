@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/milk_request_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class RequestFormScreen extends StatefulWidget {
   final MilkRequestModel? request; // null if creating, non-null if editing
@@ -136,7 +133,7 @@ class _RequestFormScreenState extends State<RequestFormScreen> {
               const SizedBox(height: 16),
 
               DropdownButtonFormField<String>(
-                value: _relation,
+                initialValue: _relation,
                 decoration: const InputDecoration(
                   labelText: 'Relationship to Infant *',
                   border: OutlineInputBorder(),
@@ -252,4 +249,3 @@ class _RequestFormScreenState extends State<RequestFormScreen> {
     );
   }
 }
-

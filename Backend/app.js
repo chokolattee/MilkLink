@@ -76,10 +76,7 @@ app.use('/api/v1', account);
 // Example refresh route
 app.post('/api/v1/refresh-token', (req, res) => {
     const refreshToken = req.cookies.refreshToken || req.body.refreshToken;
-    console.log("Refresh Token:", refreshToken);
-    console.log("Called")
     if (!refreshToken) return res.status(401).json({ message: 'No refresh token' });
-    console.log("JWT refresh: ", process.env.JWT_REFRESH_SECRET);
     try {
         const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET);
         const newAccessToken = jwt.sign({ id: decoded.id, role: decoded.role }, process.env.JWT_SECRET, {

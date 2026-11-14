@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/inventory_models.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class CollectionFormScreen extends StatefulWidget {
   final CollectionModel collection;
@@ -329,4 +326,3 @@ class _CollectionFormScreenState extends State<CollectionFormScreen> {
     );
   }
 }
-

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../core/constants/app_colors.dart';
-import '../../models/letting_event_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../widgets/app_widgets.dart';
 
 class EventDetailScreen extends StatefulWidget {

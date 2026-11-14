@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants/api_constants.dart';
-import '../core/network/api_client.dart';
-import '../models/notification_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 enum NotifStatus { initial, loading, loaded, error }
 
@@ -62,4 +60,3 @@ class NotificationsProvider extends ChangeNotifier {
     } catch (_) {}
   }
 }
-

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import '../../core/constants/app_colors.dart';
-import '../../models/donor_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../../models/admin/admin_models.dart';
-import '../../models/patient_model.dart';
 import '../../providers/admin/admin_provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../providers/staff_provider.dart';
@@ -297,74 +295,6 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                   );
                 }
                 notesController.dispose();
-              },
-              child: const Text('Save Status'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _openPatientStatusDialog(PatientModel patient) {
-    final staffProvider = context.read<StaffProvider>();
-    var selectedStatus = patient.patientType;
-    const statuses = ['Inpatient', 'Outpatient'];
-
-    showDialog(
-      context: context,
-      builder: (dialogContext) => StatefulBuilder(
-        builder: (context, setDialogState) => AlertDialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-          title: const Text('Edit Recipient Status'),
-          content: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 400),
-            child: SingleChildScrollView(
-              child: DropdownButtonFormField<String>(
-                initialValue: statuses.contains(selectedStatus)
-                    ? selectedStatus
-                    : statuses.first,
-                items: statuses
-                    .map(
-                      (status) => DropdownMenuItem(
-                        value: status,
-                        child: Text(status),
-                      ),
-                    )
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setDialogState(() => selectedStatus = value);
-                  }
-                },
-                decoration: const InputDecoration(
-                  labelText: 'Recipient status',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(dialogContext),
-              child: const Text('Cancel'),
-            ),
-            FilledButton(
-              onPressed: () async {
-                Navigator.pop(dialogContext);
-                final payload = patient.toJson()
-                  ..['patientType'] = selectedStatus;
-                final success =
-                    await staffProvider.updatePatient(patient.id, payload);
-                if (mounted) {
-                  _showMessage(
-                    success
-                        ? 'Recipient status updated.'
-                        : 'Unable to update recipient status.',
-                    isError: !success,
-                  );
-                }
               },
               child: const Text('Save Status'),
             ),

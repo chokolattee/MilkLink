@@ -42,8 +42,6 @@ exports.allEvents = catchAsyncErrors(async (req, res, next) => {
 // Create Event => /api/v1/events
 exports.createEvent = catchAsyncErrors(async (req, res, next) => {
 
-    console.log('request: ', req.body);
-    console.log("start: ", req.body.start);
     const eventDetails = {
         start: new Date(req.body.start),  // This stores in UTC
         end: new Date(req.body.end)       // This stores in UTC

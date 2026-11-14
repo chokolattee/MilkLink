@@ -1,9 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class AccountFormScreen extends StatefulWidget {
   final String defaultRole;
@@ -28,7 +26,6 @@ class _AccountFormScreenState extends State<AccountFormScreen> {
   late String _role;
   bool _obscurePassword = true;
   bool _isSubmitting = false;
-  String? _generatedPassword;
 
   @override
   void initState() {
@@ -44,10 +41,7 @@ class _AccountFormScreenState extends State<AccountFormScreen> {
     final rand = Random.secure();
     // 12 char password with guaranteed mixed types
     final pwd = List.generate(12, (_) => chars[rand.nextInt(chars.length)]).join();
-    setState(() {
-      _generatedPassword = pwd;
-      _passwordCtrl.text = pwd;
-    });
+    _passwordCtrl.text = pwd;
   }
 
   void _copyPassword() {
@@ -338,4 +332,3 @@ class _AccountFormScreenState extends State<AccountFormScreen> {
     );
   }
 }
-

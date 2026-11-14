@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/schedule_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 
 class ScheduleFormScreen extends StatefulWidget {
   final String initialKind; // 'Event' or 'Pickup'
@@ -391,14 +388,13 @@ class _ScheduleFormScreenState extends State<ScheduleFormScreen> {
     setState(() => _isSubmitting = true);
 
     try {
-      dynamic response;
       if (_isEdit) {
-        response = await ApiClient.put(
+        await ApiClient.put(
           ApiConstants.scheduleById(widget.schedule!.id),
           data: data,
         );
       } else {
-        response = await ApiClient.post(
+        await ApiClient.post(
           ApiConstants.schedules,
           data: data,
         );
@@ -1015,4 +1011,3 @@ class _ScheduleFormScreenState extends State<ScheduleFormScreen> {
     );
   }
 }
-

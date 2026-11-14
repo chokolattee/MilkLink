@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/services/chatbot_service.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'donor_registration_screen.dart';
 import 'returning_donor_search_screen.dart';
 

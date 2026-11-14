@@ -1,10 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/dashboard_metrics_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import '../requests/milk_requests_screen.dart';
 
 class MetricsDashboardScreen extends StatefulWidget {
@@ -583,4 +580,3 @@ class _MetricsDashboardScreenState extends State<MetricsDashboardScreen> {
     );
   }
 }
-

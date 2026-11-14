@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/api_constants.dart';
-import '../../core/constants/app_colors.dart';
-import '../../core/network/api_client.dart';
-import '../../models/article_model.dart';
+import 'package:milklink_shared/milklink_shared.dart';
 import 'article_form_screen.dart';
 
 class ArticleDetailScreen extends StatefulWidget {
@@ -286,4 +283,3 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
     );
   }
 }
-
