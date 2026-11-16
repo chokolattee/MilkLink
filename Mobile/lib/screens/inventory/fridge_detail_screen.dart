@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+﻿import 'package:flutter/material.dart';
+import 'package:shared/shared.dart';
 import 'entry_form_screen.dart';
 import 'fridge_form_screen.dart';
 import 'pasteurization_form_screen.dart';

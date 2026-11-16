@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
+﻿import 'package:flutter/material.dart';
+import 'package:shared/shared.dart';
 
 class StatusBadge extends StatelessWidget {
   final String status;

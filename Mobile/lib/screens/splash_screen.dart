@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../providers/auth_provider.dart';
+import 'package:shared/shared.dart';
 import '../widgets/wave_footer.dart';
 import 'auth/login_screen.dart';
 import 'main_navigation_screen.dart';
@@ -93,17 +92,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Image.asset(
-  'images/milklink_logo.png',
-  package: 'milklink_shared',
-  fit: BoxFit.contain,
-),(
-                        'return Container(
-  child: Image.asset(
-    'images/milklink_logo.png',
-    package: 'milklink_shared',
-    fit: BoxFit.contain,
-  ),
-);',
+                        'assets/images/milklink_logo.png',
+                        package: 'shared',
                         height: 120,
                         fit: BoxFit.contain,
                       ),

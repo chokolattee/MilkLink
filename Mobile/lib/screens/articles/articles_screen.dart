@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:milklink_shared/milklink_shared.dart';
-import '../../providers/articles_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/app_widgets.dart';
 import '../content/announcement_detail_screen.dart';
 import 'article_detail_screen.dart';

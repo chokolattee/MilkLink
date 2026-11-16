@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/milklink_shared.dart';
-import '../../models/admin/admin_models.dart';
-import '../../providers/admin/admin_provider.dart';
-import '../../providers/auth_provider.dart';
-import '../../providers/staff_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/dashboard_grid_scaffold.dart';
 import '../../widgets/record_card.dart';
 import '../../widgets/records_list_scaffold.dart';

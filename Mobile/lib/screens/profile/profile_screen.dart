@@ -1,9 +1,8 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../../providers/auth_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/app_widgets.dart';
 import '../auth/login_screen.dart';
 import '../staff/staff_dashboard_screen.dart';

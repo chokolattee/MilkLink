@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../constants/web_colors.dart';
+import '../screens/auth/login_screen.dart';
 
 class NavHeader extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? onAbout;
@@ -66,14 +67,11 @@ class NavHeader extends StatelessWidget implements PreferredSizeWidget {
               const Spacer(),
 
               if (!isMobile) ...[
-                _NavBtn('About',       onTap: onAbout),
-                _NavBtn('How It Works',onTap: onHowItWorks),
-                _NavBtn('Gallery',     onTap: onGallery),
                 _NavBtn('Articles', icon: Icons.article_outlined,  onTap: onArticles ?? onUpdates),
                 _NavBtn('Events',   icon: Icons.event_outlined,     onTap: onEvents   ?? onUpdates),
                 const SizedBox(width: 10),
                 OutlinedButton.icon(
-                  onPressed: () => Navigator.of(context).pushNamed('/login'),
+                  onPressed: () => showLoginDialog(context),
                   icon: const Icon(Icons.login_rounded, size: 15),
                   label: const Text('Login'),
                   style: OutlinedButton.styleFrom(
@@ -82,21 +80,6 @@ class NavHeader extends StatelessWidget implements PreferredSizeWidget {
                     minimumSize: const Size(90, 40),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     textStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                ElevatedButton.icon(
-                  onPressed: () => Navigator.of(context).pushNamed('/become-a-donor'),
-                  icon: const Icon(Icons.favorite_rounded, size: 15),
-                  label: const Text('Become a Donor'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: WebColors.primaryBlue,
-                    foregroundColor: Colors.white,
-                    minimumSize: const Size(140, 40),
-                    elevation: 2,
-                    shadowColor: WebColors.primaryBlue.withValues(alpha: 0.3),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    textStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
                   ),
                 ),
               ] else ...[
@@ -133,7 +116,7 @@ class NavHeader extends StatelessWidget implements PreferredSizeWidget {
             const Divider(height: 24),
             Row(children: [
               Expanded(child: OutlinedButton(
-                  onPressed: () { Navigator.pop(ctx); Navigator.of(context).pushNamed('/login'); },
+                  onPressed: () { Navigator.pop(ctx); showLoginDialog(context); },
                   style: OutlinedButton.styleFrom(
                     minimumSize: const Size(0, 48),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -177,7 +160,7 @@ class _Logo extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: Image.asset(
         'assets/images/milklink_logo.png',
-        package: 'milklink_shared',
+        package: 'shared',
         fit: BoxFit.contain
       ),
     );

@@ -1,11 +1,8 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'package:milklink_shared/milklink_shared.dart';
-import '../../providers/articles_provider.dart';
-import '../../providers/auth_provider.dart';
-import '../../providers/donor_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/app_widgets.dart';
 import '../auth/claim_record_screen.dart';
 import '../content/announcement_detail_screen.dart';

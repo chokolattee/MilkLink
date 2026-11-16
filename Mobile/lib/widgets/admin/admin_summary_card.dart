@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../../models/admin/admin_models.dart';
+import 'package:shared/shared.dart';
 
 class AdminSummaryCard extends StatelessWidget {
   const AdminSummaryCard({

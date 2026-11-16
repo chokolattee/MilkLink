@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:shared/shared.dart';
 
 // ── Public impact summary with graceful fallback ─────────────────────────────
 class WebImpactStats {

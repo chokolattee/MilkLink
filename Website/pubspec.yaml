@@ -8,9 +8,10 @@ environment:
   sdk: ^3.13.7
 
 dependencies:
+  provider: ^6.1.2
   flutter:
     sdk: flutter
-  milklink_shared:
+  shared:
     path: ../Shared
   intl: ^0.20.2
   google_fonts: ^6.2.1

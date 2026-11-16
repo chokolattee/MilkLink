@@ -9,8 +9,8 @@ environment:
 dependencies:
   flutter:
    sdk: flutter
-  milklink_shared:
-    path: ../shared
+  shared:
+    path: ../Shared
   cupertino_icons: ^1.0.8
   provider: ^6.1.2
   shared_preferences: ^2.3.2

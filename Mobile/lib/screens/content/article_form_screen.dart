@@ -1,7 +1,7 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:shared/shared.dart';
 
 class ArticleFormScreen extends StatefulWidget {
   final ArticleModel? article;

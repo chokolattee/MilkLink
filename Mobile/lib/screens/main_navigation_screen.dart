@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../providers/articles_provider.dart';
-import '../providers/donor_provider.dart';
-import '../providers/events_provider.dart';
-import '../providers/notifications_provider.dart';
+import 'package:shared/shared.dart';
 import 'articles/articles_screen.dart';
 import 'donor/donation_history_screen.dart';
 import 'events/events_screen.dart';

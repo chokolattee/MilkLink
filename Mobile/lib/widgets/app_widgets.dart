@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../providers/auth_provider.dart';
-import '../providers/notifications_provider.dart';
+import 'package:shared/shared.dart';
 import '../screens/auth/login_screen.dart';
 import '../screens/notifications/notifications_screen.dart';
 import '../screens/profile/edit_profile_screen.dart';
@@ -136,17 +134,8 @@ class AppTopBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             )
           : Image.asset(
-  'images/milklink_logo.png',
-  package: 'milklink_shared',
-  fit: BoxFit.contain,
-),(
-              'return Container(
-  child: Image.asset(
-    'images/milklink_logo.png',
-    package: 'milklink_shared',
-    fit: BoxFit.contain,
-  ),
-);',
+              'assets/images/milklink_logo.png',
+              package: 'shared',
               height: 28,
               fit: BoxFit.contain,
               alignment: Alignment.centerLeft,

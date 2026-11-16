@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/src/constants/app_colors.dart';
-import '../../providers/auth_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/wave_footer.dart';
 import '../main_navigation_screen.dart';
 import '../staff/staff_dashboard_screen.dart';
@@ -110,17 +109,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           // Centered Logo
                           Center(
                             child: Image.asset(
-  'images/milklink_logo.png',
-  package: 'milklink_shared',
-  fit: BoxFit.contain,
-),(
-                              'return Container(
-  child: Image.asset(
-    'images/milklink_logo.png',
-    package: 'milklink_shared',
-    fit: BoxFit.contain,
-  ),
-);',
+                              'assets/images/milklink_logo.png',
+                              package: 'shared',
                               height: 110,
                               fit: BoxFit.contain,
                             ),

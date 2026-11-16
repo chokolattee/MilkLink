@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+﻿import 'package:flutter/material.dart';
+import 'package:shared/shared.dart';
 import 'schedule_detail_screen.dart';
 import 'schedule_form_screen.dart';
 

@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/src/constants/app_theme.dart';
-import 'providers/auth_provider.dart';
-import 'providers/donor_provider.dart';
-import 'providers/events_provider.dart';
-import 'providers/articles_provider.dart';
-import 'providers/notifications_provider.dart';
-import 'providers/staff_provider.dart';
-import 'providers/admin/admin_provider.dart';
+import 'package:shared/shared.dart';
 import 'screens/splash_screen.dart';
 
 void main() async {

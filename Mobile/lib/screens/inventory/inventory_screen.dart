@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:shared/shared.dart';
 import 'collection_detail_screen.dart';
 import 'fridge_detail_screen.dart';
 import 'fridge_form_screen.dart';

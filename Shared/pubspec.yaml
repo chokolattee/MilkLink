@@ -1,4 +1,4 @@
-name: milklink_shared
+name: shared
 description: Shared web-safe models, API services, and domain logic for MilkLink clients.
 publish_to: none
 version: 1.0.0
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.1.2
   google_fonts: ^6.2.1
   http: ^1.2.2
   intl: ^0.20.2

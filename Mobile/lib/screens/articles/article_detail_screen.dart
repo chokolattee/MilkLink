@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:shared/shared.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
   final ArticleModel article;

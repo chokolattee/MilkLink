@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:shared/shared.dart';
 import '../constants/web_colors.dart';
 import '../services/web_api_service.dart';
 import '../widgets/landing_widgets.dart';

@@ -240,12 +240,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.3"
-  milklink_shared:
-    dependency: "direct main"
+  nested:
+    dependency: transitive
     description:
-      path: "../Shared"
-      relative: true
-    source: path
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.0"
   objective_c:
     dependency: transitive
@@ -335,6 +336,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: "4e82183fa20e5ca25703ead7e05de9e4cceed1fbd1eadc1ac3cb6f565a09f272"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.5+1"
   pub_semver:
     dependency: transitive
     description:
@@ -351,6 +360,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  shared:
+    dependency: "direct main"
+    description:
+      path: "../Shared"
+      relative: true
+    source: path
+    version: "1.0.0"
   shared_preferences:
     dependency: transitive
     description:

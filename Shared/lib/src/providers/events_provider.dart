@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:milklink_shared/milklink_shared.dart';
+import 'package:flutter/foundation.dart';
+import '../constants/api_constants.dart';
+import '../models/letting_event_model.dart';
+import '../network/api_client.dart';
 
 enum EventsStatus { initial, loading, loaded, error }
 

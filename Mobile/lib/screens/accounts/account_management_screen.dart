@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:milklink_shared/milklink_shared.dart';
-import '../../providers/auth_provider.dart';
+import 'package:shared/shared.dart';
 import '../../widgets/user_avatar.dart';
 import 'account_detail_screen.dart';
 import 'account_form_screen.dart';
