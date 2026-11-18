@@ -1,12 +1,16 @@
 class ApiConstants {
-  // ── Connection ─────────────────────────────────────────────────────────────
-  // Change to '10.0.2.2' if using an Android Emulator, or your computer's local Wi-Fi IP for physical devices.
-  static const String _host = '192.168.0.104';
+  // // ── Connection ─────────────────────────────────────────────────────────────
+  // // Change to '10.0.2.2' if using an Android Emulator, or your computer's local Wi-Fi IP for physical devices.
+  // static const String _host = '192.168.0.104';
 
-  // Keep in sync with PORT in Backend/config/.env
-  static const int _port = 4000;
+  // // Keep in sync with PORT in Backend/config/.env
+  // static const int _port = 4000;
 
-  static String get baseUrl => 'http://$_host:$_port/api/v1';
+  // static String get baseUrl => 'http://$_host:$_port/api/v1';
+
+// ── Connection ─────────────────────────────────────────────────────────────
+static const String baseUrl =
+    'https:// https://subcallosal-droughty-silva.ngrok-free/api/v1';
 
   // ── Request Header Constants ───────────────────────────────────────────────
   static const String clientTypeHeader = 'x-client-type';
@@ -149,4 +153,7 @@ class ApiConstants {
   static String adminAccountRole(String id) => '$baseUrl/admin/account/$id/role';
   static String adminAccountDeactivate(String id) => '$baseUrl/admin/account/$id/deactivate';
   static String adminAccountReactivate(String id) => '$baseUrl/admin/account/$id/reactivate';
+  static String get adminDonorApplications => '$baseUrl/admin/donor-applications';
+
+
 }

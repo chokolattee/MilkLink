@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:shared/shared.dart';
 import 'src/screens/landing_screen.dart';
 import 'src/screens/become_donor_screen.dart';
+import 'src/screens/admin/donor_records_screen.dart';
 
 void main() {
   runApp(
@@ -41,27 +42,18 @@ class MilkLinkWebApp extends StatelessWidget {
         ),
       ),
       initialRoute: '/',
-      routes: {
-        '/':               (_) => const LandingScreen(),
-        '/become-a-donor': (_) => const BecomeDonorScreen(),
-        '/admin':          (_) => const AdminDashboardScreen(),
-        '/staff':          (_) => const StaffDashboardScreen(),
-        '/donor':          (_) => const MainNavigationScreen(),
-      },
+     routes: {
+  '/':               (_) => const LandingScreen(),
+  '/become-a-donor': (_) => const BecomeDonorScreen(),
+  '/admin':          (_) => const _AdminGate(),
+  '/staff':          (_) => const StaffDashboardScreen(),
+  '/donor':          (_) => const MainNavigationScreen(),
+},
       onUnknownRoute: (settings) => MaterialPageRoute(
         builder: (_) => const LandingScreen(),
         settings: settings,
       ),
     );
-  }
-}
-
-class AdminDashboardScreen extends StatelessWidget {
-  const AdminDashboardScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('Admin Dashboard')));
   }
 }
 
@@ -80,5 +72,20 @@ class MainNavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(body: Center(child: Text('Donor Portal')));
+  }
+}
+
+class _AdminGate extends StatelessWidget {
+  const _AdminGate();
+
+  @override
+  Widget build(BuildContext context) {
+    final auth = context.watch<AuthProvider>();
+    if (auth.status == AuthStatus.initial ||
+        auth.status == AuthStatus.loading) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+    if (!auth.isAdmin) return const LandingScreen();
+    return const AdminDonorRecordsScreen();
   }
 }

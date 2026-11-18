@@ -15,31 +15,44 @@ const jwt = require('jsonwebtoken');
 dotenv.config({ path: 'config/.env' });
 
 const allowedOrigins = [
-    'http://192.168.7.85',
-    'http://192.168.5.235:8081',
-    'http://192.168.5.234:8081',
-    'https://milklink-portal.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'http://127.0.0.1:3000',
 ];
 
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin) return callback(null, true);
+
         if (/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) {
             return callback(null, true);
         }
-        if (allowedOrigins.includes(origin)) return callback(null, true);
-        return callback(new Error('Not allowed by CORS'));
+
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        }
+
+        return callback(new Error(`Not allowed by CORS: ${origin}`));
     },
+
     credentials: true,
+
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'x-client-type'],
+
+    allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+        'x-client-type',
+        'ngrok-skip-browser-warning',
+    ],
 };
 
-app.use(cors(corsOptions));
 app.use(cookieParser());
-// Middleware
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(cors(corsOptions));
+
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload()); // For handling file uploads
 
@@ -65,9 +78,11 @@ const consent = require('./routes/consent');
 const pickup = require('./routes/pickup');
 const screening = require('./routes/screeningAppointment');
 const account = require('./routes/account');
+const tally = require ('./routes/tally');
 
 
 // API routes
+app.use('/api/v1', tally)
 app.use('/api/v1', user);
 app.use('/api/v1', event);
 app.use('/api/v1', patient);
