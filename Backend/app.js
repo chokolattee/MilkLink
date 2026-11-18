@@ -11,13 +11,27 @@ const checkEvents = require('./schedule/eventChecker');
 const cookieParser = require('cookie-parser')
 const errorMiddleware = require('./middlewares/errors');
 const jwt = require('jsonwebtoken');
-// Setting up config file
+
 dotenv.config({ path: 'config/.env' });
 
+const allowedOrigins = [
+    'http://192.168.7.85',
+    'http://192.168.5.235:8081',
+    'http://192.168.5.234:8081',
+    'https://milklink-portal.vercel.app',
+];
+
 const corsOptions = {
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://192.168.7.85', 'http://192.168.5.235:8081', 'http://192.168.5.234:8081', 'https://milklink-portal.vercel.app'], // Add your frontend's URL here
+    origin: (origin, callback) => {
+        if (!origin) return callback(null, true);
+        if (/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) {
+            return callback(null, true);
+        }
+        if (allowedOrigins.includes(origin)) return callback(null, true);
+        return callback(new Error('Not allowed by CORS'));
+    },
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-client-type'],
 };
 
@@ -51,6 +65,8 @@ const consent = require('./routes/consent');
 const pickup = require('./routes/pickup');
 const screening = require('./routes/screeningAppointment');
 const account = require('./routes/account');
+
+
 // API routes
 app.use('/api/v1', user);
 app.use('/api/v1', event);

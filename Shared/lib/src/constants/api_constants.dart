@@ -1,7 +1,7 @@
 class ApiConstants {
   // ── Connection ─────────────────────────────────────────────────────────────
   // Change to '10.0.2.2' if using an Android Emulator, or your computer's local Wi-Fi IP for physical devices.
-  static const String _host = '10.170.155.29';
+  static const String _host = '192.168.0.104';
 
   // Keep in sync with PORT in Backend/config/.env
   static const int _port = 4000;

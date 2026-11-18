@@ -4,29 +4,32 @@
   "description": "CAPSTONE backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node --check app.js && node --check server.js",
+    "test": "node --test",
+    "seed:donor-form": "node seeds/seedDonorForm.js",
     "start": "nodemon server.js",
     "dev": "cross-env NODE_ENV=DEVELOPMENT nodemon server.js",
     "prod": "cross-env NODE_ENV=PRODUCTION nodemon server.js"
   },
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcryptjs": "^3.0.3",
     "body-parser": "^2.4.0",
     "cloudinary": "^2.11.0",
     "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
+    "cors": "^2.8.6",
     "dotenv": "^18.0.9",
     "express": "^5.3.0",
-    "express-fileupload": "^1.4.3",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^9.11.4",
-    "multer": "^2.0.0-rc.4",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.12.1",
+    "multer": "^2.5.0",
     "node-cron": "^4.6.0",
     "node-fetch": "^3.3.2",
-    "nodemailer": "^10.3.1",
+    "nodemailer": "^10.6.0",
+    "pdfkit": "^0.20.2",
     "qrcode": "^1.5.4",
-    "validator": "^13.11.0"
+    "validator": "^13.15.35"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

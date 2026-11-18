@@ -87,9 +87,6 @@ class _LandingScreenState extends State<LandingScreen> {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 1. HERO SECTION
-// ─────────────────────────────────────────────────────────────────────────────
 class _HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -166,20 +163,6 @@ class _HeroText extends StatelessWidget {
             textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
           ),
         )),
-
-        // Secondary CTA
-        OutlinedButton.icon(
-          onPressed: () {},
-          icon: const Icon(Icons.local_hospital_outlined, size: 18),
-          label: const Text('Request Donor Milk'),
-          style: OutlinedButton.styleFrom(
-            foregroundColor: WebColors.primaryNavy,
-            side: const BorderSide(color: WebColors.primaryNavy, width: 1.5),
-            minimumSize: const Size(190, 54),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
-          ),
-        ),
       ]),
 
       const SizedBox(height: 28),
@@ -287,9 +270,6 @@ class _MiniStat extends StatelessWidget {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 2. ABOUT & IMPACT SECTION
-// ─────────────────────────────────────────────────────────────────────────────
 class _AboutSection extends StatelessWidget {
   final Future<WebImpactStats> metricsFuture;
   const _AboutSection({required this.metricsFuture});

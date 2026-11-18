@@ -27,14 +27,12 @@ class MilkLinkWebApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Extend the shared AppTheme and wire in Poppins (already declared in AppTheme)
     final baseTheme = AppTheme.theme;
 
     return MaterialApp(
       title: 'MilkLink — Pasig City Human Milk Bank Portal',
       debugShowCheckedModeBanner: false,
       theme: baseTheme.copyWith(
-        // Override text theme with Poppins (already in shared, reinforced here)
         textTheme: GoogleFonts.poppinsTextTheme(baseTheme.textTheme),
         // Ensure web-appropriate scroll behaviour
         scrollbarTheme: ScrollbarThemeData(
@@ -42,7 +40,6 @@ class MilkLinkWebApp extends StatelessWidget {
           trackColor: WidgetStateProperty.all(AppColors.border),
         ),
       ),
-      // Named routes — go_router is optional for now; flutter Navigator 1.0 works fine
       initialRoute: '/',
       routes: {
         '/':               (_) => const LandingScreen(),
